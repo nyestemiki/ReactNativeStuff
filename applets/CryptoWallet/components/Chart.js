@@ -1,0 +1,152 @@
+import React from 'react'
+import { View, Text } from 'react-native'
+import {
+	ChartDot,
+	ChartPath,
+	ChartPathProvider,
+	ChartXLabel,
+	ChartYLabel,
+	monotoneCubicInterpolation
+} from '@rainbow-me/animated-charts'
+import { SIZES, COLORS, FONTS } from '../../../constants/cryptoWallet'
+import moment from 'moment'
+
+export default ({ containerStyle, chartPrices }) => {
+	const startUnixTimestamp = moment().subtract(7, 'day').unix()
+	const data =
+		chartPrices?.map((item, index) => ({
+			x: startUnixTimestamp + (index + 1) * 3600,
+			y: item
+		})) ?? []
+	const points = monotoneCubicInterpolation({ data, range: 40 })
+
+	const formatUsd = value => {
+		'worklet'
+
+		return value === '' ? '' : `$${Number(value).toFixed(2)}`
+	}
+
+	const formatDateTime = value => {
+		'worklet'
+
+		if (value === '') return ''
+
+		const selectedDate = new Date(value * 1000)
+		const date = `0${selectedDate.getDate()}`.slice(-2)
+		const month = `0${selectedDate.getMonth() + 1}`.slice(-2)
+
+		return `${date} / ${month}`
+	}
+
+	const formatNumber = (value, roundingPoint) => {
+		if (value > 1e9) {
+			return `${(value / 1e9).toFixed(roundingPoint)}B`
+		} else if (value > 1e6) {
+			return `${(value / 1e6).toFixed(roundingPoint)}M`
+		} else if (value > 1e3) {
+			return `${(value / 1e3).toFixed(roundingPoint)}K`
+		} else {
+			return value.toFixed(roundingPoint)
+		}
+	}
+
+	const getYAxisLabelValues = () => {
+		if (chartPrices !== undefined) {
+			const minValue = Math.min(...chartPrices)
+			const maxValue = Math.max(...chartPrices)
+			const midValue = (minValue + maxValue) / 2
+
+			const highterMidValue = (maxValue + midValue) / 2
+			const lowerMidValue = (minValue + midValue) / 2
+
+			const roundingPoint = 2
+
+			return [
+				formatNumber(maxValue, roundingPoint),
+				formatNumber(highterMidValue, roundingPoint),
+				formatNumber(lowerMidValue, roundingPoint),
+				formatNumber(minValue, roundingPoint)
+			]
+		} else {
+			return []
+		}
+	}
+
+	return (
+		<View style={{ ...containerStyle }}>
+			<View
+				style={{
+					position: 'absolute',
+					left: SIZES.padding,
+					top: 0,
+					bottom: 0,
+					justifyContent: 'space-between'
+				}}
+			>
+				{getYAxisLabelValues().map((item, index) => {
+					return (
+						<Text key={index} style={{ color: COLORS.lightGray3, ...FONTS.body4 }}>
+							{item}
+						</Text>
+					)
+				})}
+			</View>
+			{data.length > 0 && (
+				<ChartPathProvider data={{ points, smoothingStrategy: 'bezier' }}>
+					<ChartPath
+						height={150}
+						width={SIZES.width}
+						stroke={COLORS.lightGreen}
+						strokeWidth={2}
+					/>
+					<ChartDot>
+						<View
+							style={{
+								position: 'absolute',
+								left: -35,
+								width: 80,
+								alignItems: 'center',
+								backgroundColor: COLORS.transparentBlack1
+							}}
+						>
+							<View
+								style={{
+									alignItems: 'center',
+									justifyContent: 'center',
+									width: 25,
+									height: 25,
+									borderRadius: 15,
+									backgroundColor: COLORS.white
+								}}
+							>
+								<View
+									style={{
+										width: 15,
+										height: 15,
+										borderRadius: 10,
+										backgroundColor: COLORS.lightGreen
+									}}
+								/>
+							</View>
+
+							<ChartYLabel
+								format={formatUsd}
+								style={{ color: COLORS.white, ...FONTS.body5 }}
+							/>
+
+							<ChartXLabel
+								format={formatDateTime}
+								style={{
+									color: COLORS.lightGray3,
+									...FONTS.body5,
+									lineHeight: 15,
+									marginTop: 15
+								}}
+							/>
+						</View>
+					</ChartDot>
+				</ChartPathProvider>
+			)}
+		</View>
+	)
+}
