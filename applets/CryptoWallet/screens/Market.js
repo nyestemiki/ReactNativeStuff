@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Animated, FlatList, Image } from 'react-n
 import { LineChart } from 'react-native-chart-kit'
 import { connect } from 'react-redux'
 import { COLORS, constants, FONTS, icons, SIZES } from '../../../constants/cryptoWallet'
-import { getCoinMarket } from '../../../store/market/marketActions'
+import { getCoinMarket } from '../../../store/cryptoWallet/market/marketActions'
 import { HeaderBar, TextButton } from '../components'
 import MainLayout from './MainLayout'
 

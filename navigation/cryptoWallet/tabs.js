@@ -5,7 +5,7 @@ import { COLORS, icons, SIZES } from '../../constants/cryptoWallet'
 import { TabIcon } from '../../applets/CryptoWallet/components'
 import { TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
-import { setTradeModalVisibity } from '../../store/tab/tabActions'
+import { setTradeModalVisibity } from '../../store/cryptoWallet/tab/tabActions'
 
 const Tab = createBottomTabNavigator()
 
