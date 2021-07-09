@@ -30,6 +30,13 @@ export default function HomedScreen({ navigation }: StackScreenProps<RootStackPa
 					to='CryptoWallet'
 					navigation={navigation}
 				/>
+				<AppCard
+					title='Milk Tea Shop'
+					description='Shop app for Milk Tea'
+					img={require('../assets/images/applets/milkteashop.png')}
+					to='MilkTeaShop'
+					navigation={navigation}
+				/>
 			</View>
 		</View>
 	)

@@ -3,6 +3,7 @@ export type RootStackParamList = {
 	HelloWorld: undefined
 	LiquidSwipe: undefined
 	CryptoWallet: undefined
+	MilkTeaShop: undefined
 	NotFound: undefined
 }
 

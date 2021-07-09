@@ -5,6 +5,7 @@ import { ColorSchemeName } from 'react-native'
 import CryptoWalletScreen from '../applets/CryptoWallet'
 import HelloWorldScreen from '../applets/HelloWorld'
 import LiquidSwipeScreen from '../applets/LiquidSwipe'
+import MilkTeaShopScreen from '../applets/MilkTeaShop'
 import HomeScreen from '../screens/HomeScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import { RootStackParamList } from '../types'
@@ -36,6 +37,11 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 					name='CryptoWallet'
 					component={CryptoWalletScreen}
 					options={{ title: 'Crypto Wallet' }}
+				/>
+				<Stack.Screen
+					name='MilkTeaShop'
+					component={MilkTeaShopScreen}
+					options={{ title: 'Milk Tea Shop' }}
 				/>
 
 				<Stack.Screen
