@@ -2,9 +2,7 @@
 	"main": "node_modules/expo/AppEntry.js",
 	"scripts": {
 		"emulator": "emulator -avd Galaxy_S9_29_",
-		"android": "expo start --android"
-	},
-	"commentedScripts": {
+		"android": "expo start --android",
 		"start": "expo start",
 		"ios": "expo start --ios",
 		"web": "expo start --web",

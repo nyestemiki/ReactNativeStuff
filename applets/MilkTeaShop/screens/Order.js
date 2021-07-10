@@ -180,7 +180,7 @@ const Order = ({ navigation, route, appTheme }) => {
 				style={{
 					flex: 1,
 					backgroundColor: appTheme.backgroundColor,
-					marginTop: -25,
+					marginTop: -40,
 					borderTopRightRadius: 40,
 					borderTopLeftRadius: 40
 				}}

@@ -37,6 +37,13 @@ export default function HomedScreen({ navigation }: StackScreenProps<RootStackPa
 					to='MilkTeaShop'
 					navigation={navigation}
 				/>
+				<AppCard
+					title='Food Recipe App'
+					description='Browse various receipes'
+					img={require('../assets/images/applets/food.png')}
+					to='FoodRecipe'
+					navigation={navigation}
+				/>
 			</View>
 		</View>
 	)

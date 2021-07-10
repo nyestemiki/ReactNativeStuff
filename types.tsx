@@ -4,6 +4,7 @@ export type RootStackParamList = {
 	LiquidSwipe: undefined
 	CryptoWallet: undefined
 	MilkTeaShop: undefined
+	FoodRecipe: undefined
 	NotFound: undefined
 }
 

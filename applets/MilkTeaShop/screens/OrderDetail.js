@@ -171,7 +171,7 @@ const OrderDetail = ({ navigation, route, appTheme }) => {
 					</View>
 				</View>
 
-				<View style={{ flexDirection: 'row', marginTop: SIZES.padding }}>
+				<View style={{ flexDirection: 'row', marginTop: SIZES.padding, justifyContent: 'center',alignItems: 'center' }}>
 					<View style={{ flex: 1, alignItems: 'center' }}>
 						<Text style={{ color: appTheme.headerColor, ...FONTS.h2, fontSize: 20 }}>
 							Milk
