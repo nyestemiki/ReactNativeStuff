@@ -1,2 +1,5 @@
-export { default as HeaderBar } from './HeaderBar'
 export { default as CustomButton } from './CustomButton'
+export { default as HeaderBar } from './HeaderBar'
+export { default as IconButton } from './IconButton'
+export { default as TabButton } from './TabButton'
+export { default as VerticalTextButton } from './VerticalTextButton'

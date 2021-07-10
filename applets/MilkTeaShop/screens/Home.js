@@ -38,14 +38,6 @@ const TabIndicator = ({ measureLayout, scrollX }) => {
 		outputRange: measureLayout.map(measure => measure.x)
 	})
 
-	useEffect(() => {
-		console.log('t', tabIndicatorWidth)
-	}, [])
-
-	useEffect(() => {
-		console.log(tabIndicatorWidth)
-	}, [tabIndicatorWidth])
-
 	return (
 		<Animated.View
 			style={{
@@ -78,10 +70,6 @@ const Tabs = ({ appTheme, scrollX, onPromoTabPress }) => {
 			})
 		})
 	}, [containerRef.current])
-
-	useEffect(() => {
-		console.log(measureLayout)
-	}, [measureLayout])
 
 	return (
 		<View
