@@ -50,6 +50,78 @@ const trendingRecipes = [
 				icon: icons.pepper,
 				description: 'Black Pepper',
 				quantity: '¼ tbsp'
+			},
+			{
+				id: 11,
+				icon: icons.pasta,
+				description: 'Spaghetti pasta',
+				quantity: '100g'
+			},
+			{
+				id: 12,
+				icon: icons.oil,
+				description: 'Olive Oil',
+				quantity: '2 tbsp'
+			},
+			{
+				id: 13,
+				icon: icons.shrimp,
+				description: 'Fresh Shrimp',
+				quantity: '100g'
+			},
+			{
+				id: 14,
+				icon: icons.tomato,
+				description: 'Campari tomatoes',
+				quantity: '100g'
+			},
+			{
+				id: 15,
+				icon: icons.salt,
+				description: 'Salt',
+				quantity: '¾ tbsp'
+			},
+			{
+				id: 16,
+				icon: icons.pepper,
+				description: 'Black Pepper',
+				quantity: '¼ tbsp'
+			},
+			{
+				id: 111,
+				icon: icons.pasta,
+				description: 'Spaghetti pasta',
+				quantity: '100g'
+			},
+			{
+				id: 112,
+				icon: icons.oil,
+				description: 'Olive Oil',
+				quantity: '2 tbsp'
+			},
+			{
+				id: 113,
+				icon: icons.shrimp,
+				description: 'Fresh Shrimp',
+				quantity: '100g'
+			},
+			{
+				id: 114,
+				icon: icons.tomato,
+				description: 'Campari tomatoes',
+				quantity: '100g'
+			},
+			{
+				id: 115,
+				icon: icons.salt,
+				description: 'Salt',
+				quantity: '¾ tbsp'
+			},
+			{
+				id: 116,
+				icon: icons.pepper,
+				description: 'Black Pepper',
+				quantity: '¼ tbsp'
 			}
 		],
 		viewers: [
