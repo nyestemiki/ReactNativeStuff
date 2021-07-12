@@ -6,7 +6,9 @@ import CryptoWalletScreen from '../applets/CryptoWallet'
 import FoodRecipeScreen from '../applets/FoodRecipe'
 import HelloWorldScreen from '../applets/HelloWorld'
 import LiquidSwipeScreen from '../applets/LiquidSwipe'
+import LiquidTabBarScreen from '../applets/LiquidTabBar'
 import MilkTeaShopScreen from '../applets/MilkTeaShop'
+import MovieStreamingScreen from '../applets/MovieStreaming'
 import HomeScreen from '../screens/HomeScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import { RootStackParamList } from '../types'
@@ -48,6 +50,16 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 					name='FoodRecipe'
 					component={FoodRecipeScreen}
 					options={{ title: 'FoodRecipe' }}
+				/>
+				<Stack.Screen
+					name='LiquidTabBar'
+					component={LiquidTabBarScreen}
+					options={{ title: 'Liquid Tab Bar' }}
+				/>
+				<Stack.Screen
+					name='MovieStreaming'
+					component={MovieStreamingScreen}
+					options={{ title: 'Movie Streaming App' }}
 				/>
 
 				<Stack.Screen

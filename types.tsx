@@ -5,6 +5,8 @@ export type RootStackParamList = {
 	CryptoWallet: undefined
 	MilkTeaShop: undefined
 	FoodRecipe: undefined
+	LiquidTabBar: undefined
+	MovieStreaming: undefined
 	NotFound: undefined
 }
 

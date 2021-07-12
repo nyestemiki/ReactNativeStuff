@@ -3,6 +3,7 @@ import { StackScreenProps } from '@react-navigation/stack'
 import { StyleSheet, View, Text } from 'react-native'
 import AppCard from '../components/AppCard'
 import { RootStackParamList } from '../types'
+import images from '../constants/images'
 
 export default function HomedScreen({ navigation }: StackScreenProps<RootStackParamList, 'Home'>) {
 	return (
@@ -12,36 +13,50 @@ export default function HomedScreen({ navigation }: StackScreenProps<RootStackPa
 				<AppCard
 					title='Hello World'
 					description='Starter Application'
-					img={require('../assets/images/applets/hello.png')}
+					img={images.hello}
 					to='HelloWorld'
 					navigation={navigation}
 				/>
 				<AppCard
 					title='Liquid Swipe'
 					description='Liquid Swipe'
-					img={require('../assets/images/applets/liquid_swipe.png')}
+					img={images.liquidSwipe}
 					to='LiquidSwipe'
 					navigation={navigation}
 				/>
 				<AppCard
 					title='Crypto Wallet'
 					description='Wallet for Crypto Coins'
-					img={require('../assets/images/applets/coin.png')}
+					img={images.coin}
 					to='CryptoWallet'
 					navigation={navigation}
 				/>
 				<AppCard
 					title='Milk Tea Shop'
 					description='Shop app for Milk Tea'
-					img={require('../assets/images/applets/milkteashop.png')}
+					img={images.milkteashop}
 					to='MilkTeaShop'
 					navigation={navigation}
 				/>
 				<AppCard
 					title='Food Recipe App'
 					description='Browse various receipes'
-					img={require('../assets/images/applets/food.png')}
+					img={images.food}
 					to='FoodRecipe'
+					navigation={navigation}
+				/>
+				<AppCard
+					title='Liquid Tab Bar'
+					description='Animated tab bar navigation'
+					img={images.navigation}
+					to='LiquidTabBar'
+					navigation={navigation}
+				/>
+				<AppCard
+					title='Movie Streaming'
+					description='Movie Streaming App'
+					img={images.streaming}
+					to='MovieStreaming'
 					navigation={navigation}
 				/>
 			</View>
