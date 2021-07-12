@@ -5,6 +5,7 @@ const milkteashop = require('../assets/images/applets/milkteashop.png')
 const food = require('../assets/images/applets/food.png')
 const navigation = require('../assets/images/applets/navigation.png')
 const streaming = require('../assets/images/applets/streaming.png')
+const fitness = require('../assets/images/applets/fitness.png')
 
 export default {
 	hello,
@@ -13,5 +14,6 @@ export default {
 	milkteashop,
 	food,
 	navigation,
-	streaming
+	streaming,
+	fitness
 }

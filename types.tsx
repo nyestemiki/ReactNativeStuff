@@ -7,6 +7,7 @@ export type RootStackParamList = {
 	FoodRecipe: undefined
 	LiquidTabBar: undefined
 	MovieStreaming: undefined
+	Fitness: undefined
 	NotFound: undefined
 }
 

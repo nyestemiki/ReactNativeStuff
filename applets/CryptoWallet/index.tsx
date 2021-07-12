@@ -10,6 +10,7 @@ import { COLORS } from '../../constants/cryptoWallet'
 
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
+// https://www.youtube.com/watch?v=1T4mE8_ZKv8&t=1s
 export default function CryptoWalletScreen() {
 	return (
 		<Provider store={store}>

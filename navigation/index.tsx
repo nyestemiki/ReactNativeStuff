@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
 import CryptoWalletScreen from '../applets/CryptoWallet'
+import FitnessScreen from '../applets/Fitness'
 import FoodRecipeScreen from '../applets/FoodRecipe'
 import HelloWorldScreen from '../applets/HelloWorld'
 import LiquidSwipeScreen from '../applets/LiquidSwipe'
@@ -60,6 +61,11 @@ export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeNa
 					name='MovieStreaming'
 					component={MovieStreamingScreen}
 					options={{ title: 'Movie Streaming App' }}
+				/>
+				<Stack.Screen
+					name='Fitness'
+					component={FitnessScreen}
+					options={{ title: 'Fitness App' }}
 				/>
 
 				<Stack.Screen

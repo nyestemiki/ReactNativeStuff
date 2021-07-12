@@ -2,6 +2,7 @@ import * as React from 'react'
 import { StyleSheet, View } from 'react-native'
 import LiquidSwipe from './LiquidSwipe'
 
+// https://www.youtube.com/watch?v=6jxy5wfNpk0
 export default function LiquidSwipeScreen() {
 	return (
 		<View style={styles.container}>
