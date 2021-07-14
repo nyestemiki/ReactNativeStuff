@@ -1,80 +1,91 @@
-import * as React from 'react'
+import React, { useCallback } from 'react'
 import { StackScreenProps } from '@react-navigation/stack'
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import AppCard from '../components/AppCard'
 import { RootStackParamList } from '../types'
 import images from '../constants/images'
+import { BY } from '../components/AppCard/types'
 
-export default function HomedScreen({ navigation }: StackScreenProps<RootStackParamList, 'Home'>) {
+export default ({ navigation }: StackScreenProps<RootStackParamList>) => {
+	const go = useCallback(to => navigation.navigate(to), [navigation])
+
 	return (
-		<View
-			style={{
-				paddingTop: 40,
-				paddingHorizontal: 15,
-				flex: 1
-			}}
-		>
-			<Text style={{ fontSize: 50 }}>Applets</Text>
+		<View style={styles.page}>
+			<Text style={styles.title}>Applets</Text>
 			<ScrollView>
 				<View>
 					<AppCard
 						title='Hello World'
 						description='Starter Application'
 						img={images.hello}
-						to='HelloWorld'
-						navigation={navigation}
+						onPress={() => go('HelloWorld')}
+						by={BY.ME}
 					/>
 					<AppCard
 						title='Liquid Swipe'
 						description='Liquid Swipe'
 						img={images.liquidSwipe}
-						to='LiquidSwipe'
-						navigation={navigation}
+						onPress={() => go('LiquidSwipe')}
+						by={BY.WILLIAM_CANDILLON}
 					/>
 					<AppCard
 						title='Crypto Wallet'
 						description='Wallet for Crypto Coins'
 						img={images.coin}
-						to='CryptoWallet'
-						navigation={navigation}
+						onPress={() => go('CryptoWallet')}
+						by={BY.BY_PROGRAMMERS}
 					/>
 					<AppCard
 						title='Milk Tea Shop'
 						description='Shop app for Milk Tea'
 						img={images.milkteashop}
-						to='MilkTeaShop'
-						navigation={navigation}
+						onPress={() => go('MilkTeaShop')}
+						by={BY.BY_PROGRAMMERS}
 					/>
 					<AppCard
 						title='Food Recipe App'
 						description='Browse various receipes'
 						img={images.food}
-						to='FoodRecipe'
-						navigation={navigation}
+						onPress={() => go('FoodRecipe')}
+						by={BY.BY_PROGRAMMERS}
 					/>
 					<AppCard
 						title='Liquid Tab Bar'
 						description='Animated tab bar navigation'
 						img={images.navigation}
-						to='LiquidTabBar'
-						navigation={navigation}
+						onPress={() => go('LiquidTabBar')}
+						by={BY.ME}
+						wip
 					/>
 					<AppCard
 						title='Movie Streaming'
 						description='Movie Streaming App'
 						img={images.streaming}
-						to='MovieStreaming'
-						navigation={navigation}
+						onPress={() => go('MovieStreaming')}
+						by={BY.BY_PROGRAMMERS}
 					/>
 					<AppCard
 						title='Fitness'
 						description='Fitness App'
 						img={images.fitness}
-						to='Fitness'
-						navigation={navigation}
+						onPress={() => go('Fitness')}
+						by={BY.ME}
 					/>
 				</View>
 			</ScrollView>
 		</View>
 	)
 }
+
+const styles = StyleSheet.create({
+	page: {
+		padding: 14,
+		flex: 1,
+		backgroundColor: '#000'
+	},
+	title: {
+		fontSize: 50,
+		color: '#efefef',
+		marginVertical: 50
+	}
+})

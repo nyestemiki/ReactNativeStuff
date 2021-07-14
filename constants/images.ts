@@ -7,6 +7,13 @@ const navigation = require('../assets/images/applets/navigation.png')
 const streaming = require('../assets/images/applets/streaming.png')
 const fitness = require('../assets/images/applets/fitness.png')
 
+const wip = require('../assets/images/wip.png')
+
+const icon = require('../assets/images/icon.png')
+const byMe = require('../assets/images/by/me.jpg')
+const byByProgrammers = require('../assets/images/by/by_programmers.png')
+const byWilliamCandillon = require('../assets/images/by/william_candillon.jpg')
+
 export default {
 	hello,
 	liquidSwipe,
@@ -15,5 +22,10 @@ export default {
 	food,
 	navigation,
 	streaming,
-	fitness
+	fitness,
+	wip,
+	icon,
+	byMe,
+	byByProgrammers,
+	byWilliamCandillon
 }

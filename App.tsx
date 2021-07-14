@@ -17,15 +17,12 @@ export default function App() {
 		RobotoRegular: require('./assets/fonts/Roboto-Regular.ttf')
 	})
 
-	if (!loaded) {
-		return null
-	}
-
 	return (
+		loaded &&
 		isLoadingComplete && (
-			<SafeAreaProvider>
+			<SafeAreaProvider style={{ backgroundColor: '#000' }}>
 				<Navigation colorScheme={colorScheme} />
-				<StatusBar translucent animated />
+				<StatusBar translucent animated style='light' />
 			</SafeAreaProvider>
 		)
 	)

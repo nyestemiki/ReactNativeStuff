@@ -1,4 +1,8 @@
-import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
+import {
+	NavigationContainer,
+	DefaultTheme,
+	DarkTheme
+} from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
@@ -17,14 +21,22 @@ import LinkingConfiguration from './LinkingConfiguration'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
-export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
+export default function Navigation({
+	colorScheme
+}: {
+	colorScheme: ColorSchemeName
+}) {
 	return (
 		<NavigationContainer
 			linking={LinkingConfiguration}
 			theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
 		>
 			<Stack.Navigator screenOptions={{ headerShown: false }}>
-				<Stack.Screen name='Home' component={HomeScreen} options={{ title: 'Home' }} />
+				<Stack.Screen
+					name='Home'
+					component={HomeScreen}
+					options={{ title: 'Home' }}
+				/>
 
 				{/* Applets */}
 				<Stack.Screen
