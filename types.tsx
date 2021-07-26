@@ -8,6 +8,8 @@ export type RootStackParamList = {
 	LiquidTabBar: undefined
 	MovieStreaming: undefined
 	Fitness: undefined
+	Movies: undefined
+	Launcher: undefined
 	NotFound: undefined
 }
 

@@ -1,18 +1,26 @@
 import {
 	NavigationContainer,
 	DefaultTheme,
-	DarkTheme
+	DarkTheme,
+	RouteConfig,
+	StackNavigationState
 } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/stack'
+import {
+	createStackNavigator,
+	StackNavigationOptions
+} from '@react-navigation/stack'
+import { StackNavigationEventMap } from '@react-navigation/stack/lib/typescript/src/types'
 import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
 import CryptoWalletScreen from '../applets/CryptoWallet'
 import FitnessScreen from '../applets/Fitness'
 import FoodRecipeScreen from '../applets/FoodRecipe'
 import HelloWorldScreen from '../applets/HelloWorld'
+import LauncherScreen from '../applets/Launcher'
 import LiquidSwipeScreen from '../applets/LiquidSwipe'
 import LiquidTabBarScreen from '../applets/LiquidTabBar'
 import MilkTeaShopScreen from '../applets/MilkTeaShop'
+import MoviesScreen from '../applets/Movies'
 import MovieStreamingScreen from '../applets/MovieStreaming'
 import HomeScreen from '../screens/HomeScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
@@ -33,7 +41,7 @@ export default function Navigation({
 		>
 			<Stack.Navigator screenOptions={{ headerShown: false }}>
 				<Stack.Screen
-					name='Home'
+					name={'Home'}
 					component={HomeScreen}
 					options={{ title: 'Home' }}
 				/>
@@ -78,6 +86,16 @@ export default function Navigation({
 					name='Fitness'
 					component={FitnessScreen}
 					options={{ title: 'Fitness App' }}
+				/>
+				<Stack.Screen
+					name='Movies'
+					component={MoviesScreen}
+					options={{ title: 'Movies' }}
+				/>
+				<Stack.Screen
+					name='Launcher'
+					component={LauncherScreen}
+					options={{ title: 'Launcher' }}
 				/>
 
 				<Stack.Screen

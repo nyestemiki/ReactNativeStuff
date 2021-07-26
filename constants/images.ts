@@ -6,6 +6,8 @@ const food = require('../assets/images/applets/food.png')
 const navigation = require('../assets/images/applets/navigation.png')
 const streaming = require('../assets/images/applets/streaming.png')
 const fitness = require('../assets/images/applets/fitness.png')
+const movies = require('../assets/images/applets/movies.png')
+const launcher = require('../assets/images/applets/launcher.png')
 
 const wip = require('../assets/images/wip.png')
 
@@ -23,6 +25,8 @@ export default {
 	navigation,
 	streaming,
 	fitness,
+	movies,
+	launcher,
 	wip,
 	icon,
 	byMe,

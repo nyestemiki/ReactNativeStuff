@@ -71,6 +71,22 @@ export default ({ navigation }: StackScreenProps<RootStackParamList>) => {
 						onPress={() => go('Fitness')}
 						by={BY.ME}
 					/>
+					<AppCard
+						title='Movies'
+						description='Animated Flatlist'
+						img={images.movies}
+						onPress={() => go('Movies')}
+						by={BY.OTHER}
+						wip
+					/>
+					<AppCard
+						title='Launcher'
+						description='Launcher Design'
+						img={images.launcher}
+						onPress={() => go('Launcher')}
+						by={BY.ME}
+						wip
+					/>
 				</View>
 			</ScrollView>
 		</View>
@@ -80,6 +96,7 @@ export default ({ navigation }: StackScreenProps<RootStackParamList>) => {
 const styles = StyleSheet.create({
 	page: {
 		padding: 14,
+		paddingBottom: 0,
 		flex: 1,
 		backgroundColor: '#000'
 	},
