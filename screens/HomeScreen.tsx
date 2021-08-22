@@ -87,6 +87,14 @@ export default ({ navigation }: StackScreenProps<RootStackParamList>) => {
 						by={BY.ME}
 						wip
 					/>
+					<AppCard
+						title='Donut Chart'
+						description='Donut Chart animations'
+						img={images.icon}
+						onPress={() => go('DonutChart')}
+						by={BY.OTHER}
+						wip
+					/>
 				</View>
 			</ScrollView>
 		</View>

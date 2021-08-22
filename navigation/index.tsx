@@ -13,6 +13,7 @@ import { StackNavigationEventMap } from '@react-navigation/stack/lib/typescript/
 import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
 import CryptoWalletScreen from '../applets/CryptoWallet'
+import DonutChartScreen from '../applets/DonutChart'
 import FitnessScreen from '../applets/Fitness'
 import FoodRecipeScreen from '../applets/FoodRecipe'
 import HelloWorldScreen from '../applets/HelloWorld'
@@ -96,6 +97,11 @@ export default function Navigation({
 					name='Launcher'
 					component={LauncherScreen}
 					options={{ title: 'Launcher' }}
+				/>
+				<Stack.Screen
+					name='DonutChart'
+					component={DonutChartScreen}
+					options={{ title: 'Donut Chart' }}
 				/>
 
 				<Stack.Screen

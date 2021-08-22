@@ -10,6 +10,7 @@ export type RootStackParamList = {
 	Fitness: undefined
 	Movies: undefined
 	Launcher: undefined
+	DonutChart: undefined
 	NotFound: undefined
 }
 
