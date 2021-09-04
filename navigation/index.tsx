@@ -5,10 +5,7 @@ import {
 	RouteConfig,
 	StackNavigationState
 } from '@react-navigation/native'
-import {
-	createStackNavigator,
-	StackNavigationOptions
-} from '@react-navigation/stack'
+import { createStackNavigator, StackNavigationOptions } from '@react-navigation/stack'
 import { StackNavigationEventMap } from '@react-navigation/stack/lib/typescript/src/types'
 import * as React from 'react'
 import { ColorSchemeName } from 'react-native'
@@ -23,6 +20,7 @@ import LiquidTabBarScreen from '../applets/LiquidTabBar'
 import MilkTeaShopScreen from '../applets/MilkTeaShop'
 import MoviesScreen from '../applets/Movies'
 import MovieStreamingScreen from '../applets/MovieStreaming'
+import UberScreen from '../applets/Uber'
 import HomeScreen from '../screens/HomeScreen'
 import NotFoundScreen from '../screens/NotFoundScreen'
 import { RootStackParamList } from '../types'
@@ -30,22 +28,14 @@ import LinkingConfiguration from './LinkingConfiguration'
 
 const Stack = createStackNavigator<RootStackParamList>()
 
-export default function Navigation({
-	colorScheme
-}: {
-	colorScheme: ColorSchemeName
-}) {
+export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
 	return (
 		<NavigationContainer
 			linking={LinkingConfiguration}
 			theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
 		>
 			<Stack.Navigator screenOptions={{ headerShown: false }}>
-				<Stack.Screen
-					name={'Home'}
-					component={HomeScreen}
-					options={{ title: 'Home' }}
-				/>
+				<Stack.Screen name={'Home'} component={HomeScreen} options={{ title: 'Home' }} />
 
 				{/* Applets */}
 				<Stack.Screen
@@ -102,6 +92,11 @@ export default function Navigation({
 					name='DonutChart'
 					component={DonutChartScreen}
 					options={{ title: 'Donut Chart' }}
+				/>
+				<Stack.Screen
+					name='Uber'
+					component={UberScreen}
+					options={{ title: 'Uber Clone' }}
 				/>
 
 				<Stack.Screen

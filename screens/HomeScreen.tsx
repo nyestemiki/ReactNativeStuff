@@ -15,6 +15,14 @@ export default ({ navigation }: StackScreenProps<RootStackParamList>) => {
 			<ScrollView>
 				<View>
 					<AppCard
+						title='Uber'
+						description='Uber Clone'
+						img={images.icon}
+						onPress={() => go('Uber')}
+						by={BY.ME}
+						wip
+					/>
+					<AppCard
 						title='Hello World'
 						description='Starter Application'
 						img={images.hello}

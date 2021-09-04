@@ -11,6 +11,7 @@ export type RootStackParamList = {
 	Movies: undefined
 	Launcher: undefined
 	DonutChart: undefined
+	Uber: undefined
 	NotFound: undefined
 }
 
